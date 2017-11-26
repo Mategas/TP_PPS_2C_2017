@@ -1,8 +1,5 @@
 {
-  "name": "firebaseCameraApp",
+  "name": "TP_PPS_2C_2017_PR",
   "app_id": "",
-  "type": "ionic-angular",
-  "integrations": {
-    "cordova": {}
-  }
+  "type": "ionic-angular"
 }
