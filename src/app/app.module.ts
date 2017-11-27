@@ -5,7 +5,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+
+import { LoginPage } from '../pages/login/login';
+import { LoginProvider } from '../providers/login/login';
 import { AlumnoPage } from '../pages/alumno/alumno';
 import { MateriaPage } from '../pages/materia/materia';
 
@@ -17,7 +19,7 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
+    LoginPage
     AlumnoPage,
     MateriaPage
   ],
@@ -31,14 +33,15 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
+    LoginPage
     AlumnoPage,
     MateriaPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    LoginProvider
   ]
 })
 export class AppModule {}
