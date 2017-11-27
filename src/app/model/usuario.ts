@@ -17,7 +17,7 @@ export class Usuario
     public domicilio: string;
     // Legajo de la persona
     public legajo: number;
-    // Foto
+    // Nombre de la foto con extensión (va a estar en assets)
     public foto: string;
 
 

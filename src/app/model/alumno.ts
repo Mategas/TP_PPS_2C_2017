@@ -1,6 +1,6 @@
 import { Usuario } from "./usuario";
 import { Rol } from "./rol.enum";
-import { Materia } from "./materia.enum";
+import { Materia } from "./materia";
 
 export class Alumno extends Usuario{
     

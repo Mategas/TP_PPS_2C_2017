@@ -1,0 +1,47 @@
+page-login {
+
+    ion-content{
+        //background:#8ba987 //url('http://www.swiss-net.com.ar/wp-content/uploads/Fondo-negro-con-estructura-en-lineas-746551.jpg') no-repeat center center;
+        //background: url('../assets/fondo/fondo.jpg') no-repeat transparent;
+    }
+
+
+        .splash-bg {
+            position: relative;
+            background: url('../assets/imgs/bg.jpg') no-repeat transparent;
+            background-size: cover;
+            height: 30%;
+            z-index: 1;
+            background-repeat: repeat-x;
+            animation: animatedBackground 10s linear infinite;
+          }
+        
+          @keyframes animatedBackground {
+            from { background-position: 0 0; }
+            to { background-position: 100% 0; }
+          }
+        
+          .splash-info {
+            position: relative;
+            z-index: 2;
+            margin-top: -64px;
+            text-align: center;
+          }
+          .splash-logo {
+            margin: auto;
+            background: url('../assets/imgs/appicon.png') repeat transparent;
+            background-size: 100%;
+            width: 128px;
+            height: 128px;
+          }
+          .royal{
+            color: indianred;
+            }
+          .splash-intro {
+            font-size: 18px;
+            font-weight: bold;
+            max-width: 80%;
+            margin: auto;
+          }
+     
+}

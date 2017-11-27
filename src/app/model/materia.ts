@@ -1,6 +1,7 @@
 import { Profesor } from "./profesor";
 import { Turno } from "./turno.enum";
 import { Alumno } from "./alumno";
+import { Dia } from "./dia.enum";
 
 export class Materia{
 
@@ -12,6 +13,17 @@ export class Materia{
     ayudantes: Array<Alumno>;
     // El turno en el que se dicta la materia
     turno: Turno;
+    // Aula en la que se dicta
+    aula: string;
+    // Días que se dicta
+    dias: Array<Dia>;
+
+    constructor()
+    {
+        this.profesores = new Array<Profesor>();
+        this.ayudantes = new Array<Alumno>();
+        this.dias = new Array<Dia>();
+    }
 
     
 }
