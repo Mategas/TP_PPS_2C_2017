@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { LoginProvider } from '../../providers/login/login';
 
 /**
  * Generated class for the LoginPage page.
@@ -15,11 +16,36 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  email : string;
+  password : string;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+  private servicioLogin: LoginProvider ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
+  }
+
+  Log(tipo : string)
+  {
+    switch (tipo)
+    {
+      case 'FB':
+        this.servicioLogin.Facebook();
+        break;
+      case 'GO':
+        this.servicioLogin.Google();
+        break;
+      case 'GH':
+        this.servicioLogin.GitHub();
+        break;
+      case 'EM':
+        this.servicioLogin.Email(this.email, this.password);
+        break;
+
+    }
+    
   }
 
 }
