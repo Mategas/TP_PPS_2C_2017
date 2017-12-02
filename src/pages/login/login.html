@@ -19,14 +19,14 @@
 
         <ion-list>
               <ion-item>
-                <ion-input type="text" [(ngModel)]="email" placeholder="Correo Electrónico"></ion-input>
+                <ion-input type="email" [(ngModel)]="email" placeholder="Correo Electrónico"></ion-input>
               </ion-item>
               <ion-item>
                 <ion-input type="password" [(ngModel)]="password" placeholder="Contraseña"></ion-input>
               </ion-item>
             </ion-list>
                   <button ion-button (click)="Log('EM')" round full>Iniciar Sesión</button>
-                  <button ion-button round full>Registrarse</button>
+                  <button ion-button (click)="Registrarse()" round full>Registrarse</button>
             <div style="text-align:center">
                   <button (click)="Log('FB')" ion-button icon-start style="background-color:#3b5998">
                     <ion-icon  name="logo-facebook"> </ion-icon>Facebook</button>

@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
-import { Usuario } from '../../app/model/usuario';
 
 /*
   Generated class for the LoginProvider provider.
@@ -13,7 +12,7 @@ import { Usuario } from '../../app/model/usuario';
 export class LoginProvider {
 
   // Por constructor le paso la autenticación con angular
-  constructor(private afAuth: AngularFireAuth) {
+  constructor(public afAuth: AngularFireAuth) {
   }
 
 
@@ -22,19 +21,22 @@ export class LoginProvider {
   // con la URI de OAuth
   Facebook(){
     this.afAuth.auth
-    .signInWithRedirect(new firebase.auth.FacebookAuthProvider())
-    .then(res => console.log(res));
+    .signInWithPopup(new firebase.auth.FacebookAuthProvider())
+    .then(res => { this.afAuth.auth.getRedirectResult().then(respuesta => {console.log(respuesta)})})
+    .catch(error => { throw error });
   }
 
   Google(){
     this.afAuth.auth
     .signInWithRedirect(new firebase.auth.GoogleAuthProvider())
+    .then(res => { this.afAuth.auth.getRedirectResult().then(respuesta => {console.log(respuesta)})})
     .then(res => console.log(res));
   }
 
   GitHub(){
     this.afAuth.auth
-    .signInWithRedirect(new firebase.auth.GithubAuthProvider())
+    .signInWithPopup(new firebase.auth.GithubAuthProvider())
+    .then(res => { this.afAuth.auth.getRedirectResult().then(respuesta => {console.log(respuesta)})})
     .then(res => console.log(res));
   }
 
@@ -43,6 +45,12 @@ export class LoginProvider {
     .then(res => console.log(res));
 
   }
+
+  Cerrar()
+  {
+    this.afAuth.auth.signOut();
+  }
+
 
 
 

@@ -15,13 +15,17 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { FIREBASE_CONFIG } from './app.firebase.config';
+import { RegistroPage } from '../pages/registro/registro';
+import { InicioPage } from '../pages/inicio/inicio';
 
 @NgModule({
   declarations: [
     MyApp,
     LoginPage,
     AlumnoPage,
-    MateriaPage
+    MateriaPage,
+    RegistroPage,
+    InicioPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,9 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
     MyApp,
     LoginPage,
     AlumnoPage,
-    MateriaPage
+    MateriaPage,
+    RegistroPage,
+    InicioPage
   ],
   providers: [
     StatusBar,

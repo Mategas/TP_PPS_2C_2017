@@ -1,1 +1,24 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="pagina">
+        <ion-content>
+          <ion-list>
+            <button ion-item clear icon-only menuClose>
+                <ion-icon name="menu"></ion-icon>
+            </button>
+            <button ion-item menuClose>
+                <ion-icon name="contact"> </ion-icon>
+                <span> Perfil</span>
+            </button>
+            <button ion-item menuClose>
+                <ion-icon name="qr-scanner"></ion-icon>
+                <span> Leer QR</span>
+            </button>
+            <button ion-item menuClose (click)="CerrarSesion()">
+                <ion-icon name="log-out"></ion-icon>
+                <span> Cerrar Sesión</span>
+            </button>
+
+          </ion-list>
+        </ion-content>
+</ion-menu>
+
+<ion-nav #pagina [root]="rootPage"></ion-nav>
