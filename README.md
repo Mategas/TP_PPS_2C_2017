@@ -8,4 +8,17 @@ Segundo Cuatrimestre 2017, trabajo práctico grupal
 
 # Responsabilidades
 
-Aún sin asignar
+A) Vanesa -- Toma de asistencia a los alumno <br>
+B) Vanesa -- Carga de cuestionarios/ encuestas dinámicas <br>
+C) Vanesa -- Carga de archivos Excel/csv <br>
+D) Matías -- Aviso de faltas <br>
+E) Cynthia -- Aviso de Importancia <br>
+F) Matías -- Login con red social <br>
+G) Cynthia -- ABM –Alumno <br>
+H) Cynthia -- Administración de su propio perfil <br>
+I) Cynthia -- Diseño de estilos <br>
+J) Matías -- ABM Profesor y Administrativo <br>
+K) Matías -- Descarga de archivos L) Vanesa -- Gráficos estadísticos <br>
+M) Vanesa -- QR para Alumnos <br>
+N) Cynthia -- QR para Profesores <br>
+O) Matías -- QR para Encuestas
